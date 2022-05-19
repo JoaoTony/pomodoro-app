@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import Header from '../../components/header';
 
 import { Container } from './home.styles';
 
 const Home: FC = () => (
   <Container>
-    <h1>Hello world</h1>
+    <Header />
   </Container>
 );
 
