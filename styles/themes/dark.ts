@@ -1,7 +1,7 @@
 export const DARK = {
   title: 'DARK',
   colors: {
-    backgroundColor: '#000',
+    backgroundColor: '#202024',
     title: '#fff',
     subtitle: '#606060',
     text: '#606060',

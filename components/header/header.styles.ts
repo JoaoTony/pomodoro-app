@@ -12,5 +12,5 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.h1`
-  color: ${({ theme }) => theme.colors.title};
+  color: ${({ theme }) => theme.colors?.title};
 `;

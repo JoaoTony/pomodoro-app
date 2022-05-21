@@ -12,6 +12,8 @@ const Header: FC = () => {
     <Container>
       <Logo>PomodoroApp</Logo>
       <Switch
+        data-testid="switcher"
+        id="aaaa"
         onChange={() => toggleTheme()}
         checked={theme.title === 'DARK'}
       />

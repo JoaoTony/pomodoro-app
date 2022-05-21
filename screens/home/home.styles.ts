@@ -6,4 +6,6 @@ export const Container = styled.div`
 
   background-color: ${({ theme }) => theme.colors?.backgroundColor};
   color:  ${({ theme }) => theme.colors.title};
+
+  transition: all ease 0.5s;
 `;
