@@ -10,6 +10,9 @@ export const Container = styled.div`
 
   padding: 0 10%;
 
+  position: absolute;
+  top: 0;
+
   @media(min-width: 750px) {
     padding: 0 20%;
   }

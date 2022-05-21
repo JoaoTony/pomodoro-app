@@ -1,11 +1,12 @@
 import { FC } from 'react';
-import Header from '@/components/header';
+import { Header, Timer } from '@/components/index';
 
 import { Container } from './home.styles';
 
 const Home: FC = () => (
   <Container>
     <Header />
+    <Timer />
   </Container>
 );
 

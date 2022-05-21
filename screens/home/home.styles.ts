@@ -8,4 +8,8 @@ export const Container = styled.div`
   color:  ${({ theme }) => theme.colors.title};
 
   transition: all ease 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
