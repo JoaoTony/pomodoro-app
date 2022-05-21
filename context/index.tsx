@@ -2,10 +2,10 @@ import {
   useState, useContext, createContext, ReactNode, useCallback, useMemo, useEffect,
 } from 'react';
 
-import { LIGHT, DARK } from '../styles/themes';
-import { Theme } from '../types/thme.types';
+import { LIGHT, DARK } from '@/styles/themes';
+import { Theme } from '@/types/thme.types';
 
-interface AppContexProps {
+interface AppContextProps {
   toggleTheme: () => void
   theme: Theme
 }
@@ -15,9 +15,9 @@ const INITIAL_VALUES = {
   theme: LIGHT,
 };
 
-const AppContex = createContext<AppContexProps>(INITIAL_VALUES);
+const AppContext = createContext<AppContextProps>(INITIAL_VALUES);
 
-export const AppContexProvider = (props: { children: ReactNode }) => {
+export const AppContextProvider = (props: { children: ReactNode }) => {
   const [theme, setTheme] = useState(LIGHT);
   const { children } = props;
 
@@ -39,10 +39,10 @@ export const AppContexProvider = (props: { children: ReactNode }) => {
   }), [theme]);
 
   return (
-    <AppContex.Provider value={value}>
+    <AppContext.Provider value={value}>
       { children }
-    </AppContex.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useAppContex = () => useContext(AppContex);
+export const useAppContext = () => useContext(AppContext);

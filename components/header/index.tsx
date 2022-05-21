@@ -1,19 +1,18 @@
+/* eslint-disable import/extensions */
 import { FC } from 'react';
 import Switch from 'react-switch';
 
+import { useAppContext } from '@/context/index';
 import { Container, Logo } from './header.styles';
 
-import { useAppContex } from '../../context';
-
 const Header: FC = () => {
-  const { theme, toggleTheme } = useAppContex();
+  const { theme, toggleTheme } = useAppContext();
 
   return (
     <Container>
       <Logo>PomodoroApp</Logo>
       <Switch
         data-testid="switcher"
-        id="aaaa"
         onChange={() => toggleTheme()}
         checked={theme.title === 'DARK'}
       />

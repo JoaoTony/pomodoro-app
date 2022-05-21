@@ -1,7 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { render, screen, fireEvent } from '@testing-library/react';
 
-import { AppContexProvider } from '../../context';
+import { AppContextProvider } from '@/context/index';
 
 import Header from '.';
 
@@ -16,9 +15,9 @@ describe('Header Component', () => {
 
   test('Should toggle Theme', () => {
     render(
-      <AppContexProvider>
+      <AppContextProvider>
         <Header />
-      </AppContexProvider>,
+      </AppContextProvider>,
     );
 
     const switcher = screen.getByTestId('switcher');

@@ -2,14 +2,14 @@ import { ThemeProvider } from 'styled-components';
 import { FC } from 'react';
 
 import { NextComponentType, NextPageContext } from 'next';
-import GlobalStyle from '../styles/global.styles';
+import GlobalStyle from '@/styles/global.styles';
 
-import { useAppContex } from '../context';
+import { useAppContext } from '../context';
 
 const AppContent: FC<{Component: NextComponentType<NextPageContext, any, {}>; pageProps: any}> = (
   { Component, pageProps },
 ) => {
-  const { theme } = useAppContex();
+  const { theme } = useAppContext();
 
   return (
     <ThemeProvider theme={theme}>

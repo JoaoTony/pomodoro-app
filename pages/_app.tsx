@@ -1,13 +1,13 @@
 import type { AppProps } from 'next/app';
 
-import { AppContexProvider } from '../context';
+import { AppContextProvider } from '@/context/index';
 
-import AppContent from '../screens';
+import AppContent from '@/screens/index';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <AppContexProvider>
+  <AppContextProvider>
     <AppContent Component={Component} pageProps={pageProps} />
-  </AppContexProvider>
+  </AppContextProvider>
 );
 
 export default MyApp;

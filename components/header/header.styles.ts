@@ -8,7 +8,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 20%;
+  padding: 0 10%;
+
+  @media(min-width: 750px) {
+    padding: 0 20%;
+  }
 `;
 
 export const Logo = styled.h1`
