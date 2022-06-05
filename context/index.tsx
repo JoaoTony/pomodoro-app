@@ -3,19 +3,13 @@ import {
 } from 'react';
 
 import { LIGHT, DARK } from '@/styles/themes';
-import { Theme } from '@/types/thme.types';
-
-interface AppContextProps {
-  toggleTheme: () => void
-  theme: Theme
-}
 
 const INITIAL_VALUES = {
   toggleTheme: () => {},
   theme: LIGHT,
 };
 
-const AppContext = createContext<AppContextProps>(INITIAL_VALUES);
+const AppContext = createContext<typeof INITIAL_VALUES>(INITIAL_VALUES);
 
 export const AppContextProvider = (props: { children: ReactNode }) => {
   const [theme, setTheme] = useState(LIGHT);
